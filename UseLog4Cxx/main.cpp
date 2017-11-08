@@ -1,20 +1,33 @@
-#include <log4cxx/logger.h>
-#include <log4cxx/logstring.h>
-#include <log4cxx/propertyconfigurator.h>
-int main(int argc, char* argv[])
+#include "com/foo/bar.h"
+using namespace com::foo;
+
+// include log4cxx header files.
+#include "log4cxx/logger.h"
+#include "log4cxx/basicconfigurator.h"
+#include "log4cxx/helpers/exception.h"
+
+using namespace log4cxx;
+using namespace log4cxx::helpers;
+
+LoggerPtr logger(Logger::getLogger("MyApp"));
+
+int main(int argc, char **argv)
 {
-    using namespace log4cxx;
-    // 读取配置文件
-    PropertyConfigurator::configure("log4cxx.cfg");
-    // 建立两个logger
-    LoggerPtr logger1 = Logger::getLogger("TraceYourName");
-    LoggerPtr logger2 = Logger::getLogger("Patch");
-    LOG4CXX_TRACE(logger1, "TRACE");
-    LOG4CXX_WARN(logger1, "WARNING");
-    LOG4CXX_DEBUG(logger1, "DEBUG");
-    LOG4CXX_ASSERT(logger1, false, "ASSERT");
-    LOG4CXX_FATAL(logger1, "FATAL");
-    LOG4CXX_TRACE(logger2, "TRACE");
-    LOG4CXX_ERROR(logger2, "ERROR");
-    return 0;
+    int result = EXIT_SUCCESS;
+    try
+    {
+        // Set up a simple configuration that logs on the console.
+        BasicConfigurator::configure();
+        
+        LOG4CXX_INFO(logger, "Entering application.")
+        Bar bar;
+        bar.doIt();
+        LOG4CXX_INFO(logger, "Exiting application.")
+    }
+    catch(Exception&)
+    {
+        result = EXIT_FAILURE;
+    }
+    
+    return result;
 }

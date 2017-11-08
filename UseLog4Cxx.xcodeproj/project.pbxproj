@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		01EC2D0A1FB2E64000A92AE0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01EC2D091FB2E64000A92AE0 /* main.cpp */; };
 		01EC2D131FB2E82400A92AE0 /* liblog4cxx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01EC2D121FB2E82400A92AE0 /* liblog4cxx.a */; };
+		01EC2D171FB302DF00A92AE0 /* bar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01EC2D151FB302DF00A92AE0 /* bar.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		01EC2D091FB2E64000A92AE0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		01EC2D101FB2E70E00A92AE0 /* log4cxx.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = log4cxx.cfg; sourceTree = "<group>"; };
 		01EC2D121FB2E82400A92AE0 /* liblog4cxx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblog4cxx.a; path = "../../../../../fab_document/SourceCode.localized/Research/log4cxx/apache-log4cxx-0.10.0_install/lib/liblog4cxx.a"; sourceTree = "<group>"; };
+		01EC2D151FB302DF00A92AE0 /* bar.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = bar.cpp; sourceTree = "<group>"; };
+		01EC2D181FB3031300A92AE0 /* com */ = {isa = PBXFileReference; lastKnownFileType = folder; path = com; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +65,10 @@
 		01EC2D081FB2E64000A92AE0 /* UseLog4Cxx */ = {
 			isa = PBXGroup;
 			children = (
+				01EC2D181FB3031300A92AE0 /* com */,
 				01EC2D091FB2E64000A92AE0 /* main.cpp */,
 				01EC2D101FB2E70E00A92AE0 /* log4cxx.cfg */,
+				01EC2D151FB302DF00A92AE0 /* bar.cpp */,
 			);
 			path = UseLog4Cxx;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01EC2D0A1FB2E64000A92AE0 /* main.cpp in Sources */,
+				01EC2D171FB302DF00A92AE0 /* bar.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
