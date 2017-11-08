@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		01EC2D0A1FB2E64000A92AE0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01EC2D091FB2E64000A92AE0 /* main.cpp */; };
+		01EC2D131FB2E82400A92AE0 /* liblog4cxx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01EC2D121FB2E82400A92AE0 /* liblog4cxx.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		01EC2D061FB2E64000A92AE0 /* UseLog4Cxx */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UseLog4Cxx; sourceTree = BUILT_PRODUCTS_DIR; };
 		01EC2D091FB2E64000A92AE0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		01EC2D101FB2E70E00A92AE0 /* log4cxx.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = log4cxx.cfg; sourceTree = "<group>"; };
+		01EC2D121FB2E82400A92AE0 /* liblog4cxx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblog4cxx.a; path = "../../../../../fab_document/SourceCode.localized/Research/log4cxx/apache-log4cxx-0.10.0_install/lib/liblog4cxx.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01EC2D131FB2E82400A92AE0 /* liblog4cxx.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +47,7 @@
 			children = (
 				01EC2D081FB2E64000A92AE0 /* UseLog4Cxx */,
 				01EC2D071FB2E64000A92AE0 /* Products */,
+				01EC2D111FB2E82400A92AE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +63,17 @@
 			isa = PBXGroup;
 			children = (
 				01EC2D091FB2E64000A92AE0 /* main.cpp */,
+				01EC2D101FB2E70E00A92AE0 /* log4cxx.cfg */,
 			);
 			path = UseLog4Cxx;
+			sourceTree = "<group>";
+		};
+		01EC2D111FB2E82400A92AE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01EC2D121FB2E82400A92AE0 /* liblog4cxx.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +188,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "/Volumes/Macintosh-HD/fab_document/SourceCode.localized/Research/log4cxx/apache-log4cxx-0.10.0_install/include";
+				LIBRARY_SEARCH_PATHS = "/Volumes/Macintosh-HD/fab_document/SourceCode.localized/Research/log4cxx/apache-log4cxx-0.10.0_install/lib";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -223,6 +239,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "/Volumes/Macintosh-HD/fab_document/SourceCode.localized/Research/log4cxx/apache-log4cxx-0.10.0_install/include";
+				LIBRARY_SEARCH_PATHS = "/Volumes/Macintosh-HD/fab_document/SourceCode.localized/Research/log4cxx/apache-log4cxx-0.10.0_install/lib";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
